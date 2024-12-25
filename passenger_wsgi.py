@@ -1,0 +1,1 @@
+from rentty_app.wsgi import application

@@ -1,0 +1,606 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'website/style/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/style/main.css' %}" />
+    <title>Rentty</title>
+    <meta name="description" content="استأجر دراجات نارية لشركتك">
+    <meta name="description" content="Rent motorcycles for your company">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="position-relative " id="body-id2">
+    <nav> 
+            
+        <h1 class="logo">
+            <a href="{% url 'landing-page-view' %}" style="border: 0px;"></a>
+            <img src="{% static 'website/assets/images/logo.png' %}" alt="logo"/> </a>
+        </h1>
+        <a href="#" id="toggleLanguage">عربي</a>
+    </nav>
+
+    <div class="container secPage-cards ">
+        <div class="bg-white justify-content-center align-items-center rounded-5 py-3 box-shadow mb-5">
+            <div style="display: flex;justify-content: space-between;">
+                <div>
+
+                    <!-- <button type="button" class="close x-icon" data-dismiss="modal" aria-label="Close" style="order: -1; margin-right: 10px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                    <h2 id="header-request" data-en="Request a Quote 2/2" data-ar="طلب عرض سعر جديد 2/2" style="margin-right: 40px;margin-left: 40px;">
+                        طلب عرض سعر جديد
+    
+    
+                    </h2>
+                </div>
+    
+    
+            </div>
+            <hr style="margin-top: 20px;">
+            <div class="row row-gap-5 px-3 px-md-5 py-3">
+                <!-- start files -->
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+                        <h3 data-ar="ﺍﺭﻓﻖ ﺍﻟﺴﺠﻞ ﺍﻟﺘﺠﺎﺭﻱ ﻟﻠﺸﺮﻛﺔ" data-en="Attach the company's commercial registration">ﺍﺭﻓﻖ ﺍﻟﺴﺠﻞ ﺍﻟﺘﺠﺎﺭﻱ ﻟﻠﺸﺮﻛﺔ</h3>
+                        
+                        <input name="company-registration" placeholder="ارفق ملف السجل التجاري للشركة" id="company-registration" type="file" class="d-none"  required/>
+                        <label for="company-registration" class="custom-file-label input-default-width-file   p-3">
+                            <div style="display: flex; flex-direction: column; align-items: start;">
+                                <span data-ar="اختر ملف" data-en="Choose File" class="btn file-btn mx-2">اختر ملف</span>
+                                <p class="input-file-placeholder" data-en="Please attach the company's commercial registration" data-ar="ارفق ملف السجل التجاري للشركة">ارفق ملف السجل التجاري للشركة</p>
+                                
+                                
+                                
+                            </div>
+                        </label>
+                        <span id="company-registration-error" class="text-danger"></span>
+                    </div>
+                </div>
+                    <!-- start new -->
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+                        <h3 data-ar="ﺍﺭﻓﻖ هوية مالك الشركة" data-en="Attach the company's owner ID">ﺍﺭﻓﻖ هوية مالك الشركة</h3>
+                        <input name="company-owner-id" id="company-owner-id" type="file" class="d-none" required/>
+                        <label for="company-owner-id" class="custom-file-label input-default-width-file  p-3">
+                            <div style="display: flex; flex-direction: column; align-items: start;">
+                                
+                                <span data-ar="اختر ملف" data-en="Choose File" class="btn file-btn mx-2">اختر ملف</span>
+                                <p class="input-file-placeholder" data-en="Please attach the company's Owner id" data-ar="ارفق ملف هوية مالك الشركة">ارفق ملف هوية مالك الشركة</p>
+                                
+                            </div>
+                        </label>
+                        <span id="company-owner-id-error" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+
+                    <h3 data-ar="ﺍﺭﻓﻖ هوية مدير الشركة" data-en="Attach the company's manager ID">ﺍﺭﻓﻖ هوية مدير الشركة</h3>
+                    <input name="company-manager-id" id="company-manager-id" type="file" class="d-none" required/>
+                    <label for="company-manager-id" class="custom-file-label input-default-width-file  p-3">
+                        <div style="display: flex; flex-direction: column; align-items: start;">
+
+                            <span data-ar="اختر ملف" data-en="Choose File" class="btn file-btn mx-2">اختر ملف</span>
+                            <p class="input-file-placeholder" data-en="Please attach the company's manager ID" data-ar="ارفق ملف هوية مدير الشركة">ارفق ملف هوية مدير الشركة</p>
+                        </div>
+                    </label>
+                    <span id="company-manager-id-error" class="text-danger"></span>
+                </div>
+                </div>
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+
+                    <h3 data-ar="ﺍﺭﻓﻖ ترخيص هيئة النقل (اختياري)" data-en="Attach the company's transport license (optional)">ﺍﺭﻓﻖ ترخيص هيئة النقل (اختياري)</h3>
+                    <input name="company-transport-license" id="company-transport-license" type="file" class="d-none" />
+                    <label for="company-transport-license" class="custom-file-label input-default-width-file p-3">
+                        <div style="display: flex; flex-direction: column; align-items: start;">
+
+                            <span data-ar="اختر ملف" data-en="Choose File" class="btn file-btn mx-2">اختر ملف</span>
+                            <p class="input-file-placeholder" data-en="Please attach the company's transport license" data-ar="ارفق ملف ترخيص هيئة النقل">ارفق ملف ترخيص هيئة النقل</p>
+
+                        </div>
+                    </label>
+                    <span id="company-transport-license-error" class="text-danger"></span>
+                </div>
+                </div>
+                    <!-- end new -->
+                <!-- end files -->
+                
+                <!-- start text -->
+                    <!-- start new -->
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+
+                    <h3 data-ar="عدد المناديب" data-en="Representatives Count">عدد المناديب</h3>
+                    <input name="representatives-count" id="representatives-count"
+                    placeholder="الرجاء إدخال عدد المناديب"
+                    data-ar="الرجاء إدخال عدد المناديب"
+                    data-en="Please enter Representatives Count"
+                    type="number" inputmode="numeric" class="english-num input-default-width  p-3" />
+                    <span id="representatives-count-error" class="text-danger"></span>
+                </div>
+                </div>
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+
+                    <h3 data-ar="مناطق او منطقة العمل" data-en="Work Regions">مناطق او منطقة العمل</h3>
+                    <input name="work-regions" id="work-regions" type="text"
+                    placeholder="الرجاء إدخال المناطق او المنطقة التي تعمل بها"
+                    data-ar="الرجاء إدخال المناطق او المنطقة التي تعمل بها"
+                    data-en="Please enter work regions"
+                    class="english-num input-default-width  p-3" />
+                    <span id="work-regions-error" class="text-danger"></span>
+                </div>
+                </div>
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+
+                    <h3 data-ar="اسم تطبيق التوصيل" data-en="Delivery APP Name">اسم تطبيق التوصيل</h3>
+                    <input name="delivery-app-name" id="delivery-app-name" 
+                    placeholder="الرجاء إدخال اسم تطبيق التوصيل"
+                    data-ar="الرجاء إدخال اسم تطبيق التوصيل"
+                    data-en="Please enter delivery app name"
+                    type="text" class="english-num input-default-width  p-3" />
+                    <span id="delivery-app-name-error" class="text-danger"></span>
+                </div>
+                </div>
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+
+                    <h3 data-ar="مبالغ الإيداعات الشهرية من تطبيقات التوصيل" data-en="APP Monthly Deposits">مبالغ الإيداعات الشهرية من تطبيقات التوصيل</h3>
+                    <input name="monthly-deposits" id="monthly-deposits" 
+                    placeholder="الرجاء إدخال مياله الإيداعات الشهرية من تطبيقات التوصيل"
+                    data-en="Please enter app monthly deposits"
+                     data-ar="الرجاء إدخال مياله الإيداعات الشهرية من تطبيقات التوصيل" 
+                     type="number" inputmode="numeric" class="english-num input-default-width  p-3" />
+                    <span id="monthly-deposits-error" class="text-danger"></span>
+                </div>
+                </div>
+                    <!-- end new -->
+                <!-- <div class="col-md-6 d-flex flex-column">
+                    <h3 data-ar="كيف عرفت عن رنتي ؟" data-en="How did you hear about Renti?">كيف عرفت عن رنتي ؟</h3>
+                    <input name="know-us" id="know-us" type="text" class="english-num input-default-width border-3 rounded-5 p-3" />
+                    <span id="know-us-error" class="text-danger"></span>
+                </div> -->
+                <div class="col-12 d-flex flex-column">
+                    <div class="form-input-box">
+
+                    <h3 data-ar="اكتب ملاحظه (اختياري)" data-en="Write a note (optional)">اكتب ملاحظه (اختياري)</h3>
+                    <input name="message" id="message" data-en="Write notes here" data-ar="اكتب الملاحظات هنا" placeholder="اكتب الملاحظات هنا" type="text" class="english-num input-default-width  p-3" />
+                    <span id="message-error" class="text-danger"></span>
+                </div>
+                </div>
+                <!-- end text -->
+            </div>
+            <div class="d-flex align-items-end justify-content-end p-3">
+                <a href="{% url 'third-page-view' %}">
+                    <button class="btn mx-4 back-button fw-bold p-3 " data-ar="السابق" data-en="Back">السابق</button>
+                </a>
+                <button id="submit-btn" style="margin-left: 20px;" class="btn button-next fw-bold" data-ar="ارسال" data-en="Submit">ارسال</button>
+            </div>
+        </div>
+    </div>
+    <section class="footer p-5 mt-5 text-black text-center">
+        <hr>
+        <div id="footermaindiv" class="d-flex justify-content-around flex-wrap gap-5">
+          <div id="footerfirstdiv">
+            <div style="margin-bottom: 35px;">
+  
+            <img src="{% static 'website/assets/images/logo.png' %}" alt="boxer" class=""  />
+          </div>
+  
+            <p
+            class=" m-3"
+            data-ar="بسّط عملياتك التجارية مع حلول تأجير لا مثيل له"
+            data-en="Simplify your business operations with unparalleled leasing solutions"
+          >
+          بسّط عملياتك التجارية مع حلول تأجير لا مثيل له
+          </p>
+                      
+  
+          </div>
+          <div id="footerseconddiv">
+            <h6
+            data-ar="معلومات"
+            data-en="Information"
+  
+            >معلومات</h6>
+            <p
+            data-ar="سياسة الخصوصية "
+            data-en="privacy policy"
+  
+            >سياسة الخصوصية </p>
+            <p
+            data-ar=" الشروط و الأحكام"
+            data-en="terms and conditions"
+  
+            > الشروط و الأحكام</p>
+            <p
+            data-ar="الملف التعريفي"
+            data-en="Profile"
+  
+            > الملف التعريفي</p>
+  
+            
+          </div>
+          <div id="footerthirddiv">
+            <h6
+            data-ar="تواصل معنا"
+            data-en="contact us"
+  
+            >تواصل معنا</h6>
+            <a href="mailto:rent@irentty.com" style="color: black;">
+              <i class="fa-regular fa-envelope"></i> 
+            </a>
+          </div>
+  
+  
+        </div>
+        <!-- <p data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</p>
+        <p>rent@irentty.com</p> -->
+        <hr>
+  
+        <p
+          class="mt-5"
+          data-ar="ﺟﻤﻴﻊ ﺍﻟﺤﻘﻮﻕ ﻣﺤﻔﻮﻇﺔ - ﺭﻧﺘﻲ 2024"
+          data-en="All rights reserved - Rentty 202"
+        >
+        
+          ﺟﻤﻴﻊ ﺍﻟﺤﻘﻮﻕ ﻣﺤﻔﻮﻇﺔ - ﺭﻧﺘﻲ 2024
+        </p>
+      </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleLanguageButton = document.getElementById("toggleLanguage");
+            const elements = document.querySelectorAll("[data-ar]");
+            const body = document.body;
+            const submitBtn = document.getElementById("submit-btn")
+
+            // Load the saved language from local storage or default to Arabic
+            const savedLanguage = localStorage.getItem("language") || "ar";
+            setLanguage(savedLanguage);
+
+            document.querySelectorAll('input[type="file"]').forEach((fileInput) => {
+                const fileLabel = fileInput.nextElementSibling.querySelector('span');
+            
+                fileInput.addEventListener("change", () => {
+                    const fileName = fileInput.files.length > 0 
+                        ? fileInput.files[0].name 
+                        : updateLabelText();
+            
+                    if (fileLabel) {
+                        fileLabel.textContent = fileName;
+                    }
+                });
+            });
+
+            function updateLabelText(language) {
+                if (language === "ar") {
+                    return "اختر الملف"
+                } else {
+                    return "Choose file";
+                }
+            }
+
+            toggleLanguageButton.addEventListener("click", () => {
+                const currentLanguage = toggleLanguageButton.textContent === "عربي" ? "ar" : "en";
+                setLanguage(currentLanguage);
+                localStorage.setItem("language", currentLanguage);
+            });
+
+            function setLanguage(language) {
+                elements.forEach(element => {
+                    element.textContent = element.getAttribute(`data-${language}`);
+                });
+                const inputs = document.querySelectorAll("input");
+                inputs.forEach(input => {
+                    const placeholder = input.getAttribute(`data-${language}`);
+                    if (placeholder) {
+                        input.setAttribute("placeholder", placeholder);
+                    }
+                });
+                toggleLanguageButton.textContent = language === "ar" ? "English" : "عربي";
+                body.classList.toggle("english", language === "en");
+            }
+
+            document.getElementById("submit-btn").addEventListener("click", async (event) => {
+                event.preventDefault();
+                const isValid = validateForm();
+                if (isValid) {
+                    // Form is valid, save data to local storage and proceed
+                    const restData = await getRestData();
+                    await sendPriceRequest(restData);
+                }
+            });
+
+            function validateForm() {
+                let isValid = true;
+                const language = localStorage.getItem("language") || "ar";
+            
+                // Get values
+                // const knowUs = document.getElementById("know-us").value;
+                // const companyRegistration = document.getElementById("company-registration").files[0]; // Get the first file
+                const message = document.getElementById("message").value;
+                // const companyOwnerId = document.getElementById("company-owner-id").files[0];
+                // const companyManagerId = document.getElementById("company-manager-id").files[0];
+                // const companyTransportLicense = document.getElementById("company-transport-license").files[0];
+                const representativesCount = document.getElementById("representatives-count").value;
+                const workRegions = document.getElementById("work-regions").value;
+                const deliveryAppName = document.getElementById("delivery-app-name").value;
+                const monthlyDeposits = document.getElementById("monthly-deposits").value;
+
+            
+                // Get error elements
+                // const knowUsError = document.getElementById("know-us-error");
+                // const companyRegistrationError = document.getElementById("company-registration-error");
+                const messageError = document.getElementById("message-error");
+                // const companyOwnerIdError = document.getElementById("company-owner-id-error");
+                // const companyManagerIdError = document.getElementById("company-manager-id-error");
+                // const companyTransportLicenseError = document.getElementById("company-transport-license-error");
+                const representativesCountError = document.getElementById("representatives-count-error");
+                const workRegionsError = document.getElementById("work-regions-error");
+                const deliveryAppNameError = document.getElementById("delivery-app-name-error");
+                const monthlyDepositsError = document.getElementById("monthly-deposits-error");
+
+            
+                // Clear previous errors
+                // knowUsError.textContent = "";
+                // companyRegistrationError.textContent = "";
+                messageError.textContent = "";
+                // companyOwnerIdError.textContent = "";
+                // companyManagerIdError.textContent = "";
+                // companyTransportLicenseError.textContent = "";
+                representativesCountError.textContent = "";
+                workRegionsError.textContent = "";
+                deliveryAppNameError.textContent = "";
+                monthlyDepositsError.textContent = "";
+
+            
+                // Validation logic
+            
+                // Validate text input for "know-us"
+                // if (!knowUs) {
+                //     isValid = false;
+                //     knowUsError.textContent = language === "ar" ? "يرجى إدخال كيفية معرفتك بنا" : "Please enter how you heard about us";
+                // }
+
+                if (representativesCount <= 0) {
+                    isValid = false;
+                    representativesCountError.textContent = language === "ar" ? 
+                        "يرجى إدخال عدد المناديب الصحيح" : "Please enter a valid number of representatives";
+                }
+
+                if (!workRegions) {
+                    isValid = false;
+                    workRegionsError.textContent = language === "ar" ? 
+                        "يرجى إدخال مناطق العمل" : "Please enter the work regions";
+                }
+
+                if (!deliveryAppName) {
+                    isValid = false;
+                    deliveryAppNameError.textContent = language === "ar" ? 
+                        "يرجى إدخال اسم تطبيق التوصيل" : "Please enter the delivery app name";
+                }
+
+                if (!monthlyDeposits) {
+                    isValid = false;
+                    monthlyDepositsError.textContent = language === "ar" ? 
+                        "يرجى إدخال قيمة مبالغ الإيداعات الشهرية من تطبيقات التوصيل" : "Please enter the app monthly deposits";
+                }
+
+                // Configuration: Allowed file types and max size in MB
+                const allowedTypes = ["application/pdf", "image/jpeg", "image/png"];
+                // const maxSizeMB = 10;
+
+                // Get all file input elements
+                const fileInputs = document.querySelectorAll('input[type="file"][required]');
+                fileInputs.forEach((input) => {
+                    const file = input.files[0]; // Get the first selected file
+                    const errorElement = document.getElementById(`${input.id}-error`); // Error span by ID
+
+                    if (!file) {
+                        // If no file is selected
+                        isValid = false;
+                        errorElement.textContent = language === "ar"
+                            ? "يرجى إرفاق الملف"
+                            : "Please attach the file";
+                    } else {
+                        // Check file type and size
+                        if (!allowedTypes.includes(file.type)) {
+                            isValid = false;
+                            errorElement.textContent = language === "ar"
+                                ? "نوع الملف غير مدعوم"
+                                : "Unsupported file type";
+                        } else if (file.size > 126 * 1024) {
+                            isValid = false;
+                            errorElement.textContent = language === "ar"
+                                ? "حجم الملف أكبر من الحد المسموح به (الحد المسموح به 126 كيلوبايت)"
+                                : "File size exceeds the allowed limit (Allowed Limit 126 KB)";
+                        } else {
+                            // Clear any previous error messages if the file is valid
+                            errorElement.textContent = "";
+                        }
+                    }
+                });
+
+                // Note is optional, so no validation needed
+            
+                return isValid;
+            }
+
+            async function getRestData() {
+                // Initialize the restData object
+                const restData = {};
+            
+                // Get values from the form
+                // const knowUs = document.getElementById("know-us").value;
+                const message = document.getElementById("message").value;
+                const representativesCount = document.getElementById("representatives-count").value;
+                const workRegions = document.getElementById("work-regions").value;
+                const deliveryAppName = document.getElementById("delivery-app-name").value;
+                const monthlyDeposits = document.getElementById("monthly-deposits").value;
+            
+                // Files
+                const companyRegistration = document.getElementById("company-registration").files[0];
+                const companyOwnerId = document.getElementById("company-owner-id").files[0];
+                const companyManagerId = document.getElementById("company-manager-id").files[0];
+                const companyTransportLicense = document.getElementById("company-transport-license").files[0];
+            
+                // Append text values to the restData object
+                // restData.knowUs = knowUs;
+                restData.message = message;
+                restData.representativesCount = representativesCount;
+                restData.workRegions = workRegions;
+                restData.deliveryAppName = deliveryAppName;
+                restData.monthlyDeposits = monthlyDeposits;
+            
+                //// Helper function to convert files to Base64
+                // const toBase64 = file =>
+                //     new Promise((resolve, reject) => {
+                //         const reader = new FileReader();
+                //         reader.readAsDataURL(file);
+                //         reader.onload = () => resolve(reader.result);
+                //         reader.onerror = error => reject(error);
+                //     });
+            
+                // Append Base64-encoded files if they exist
+                if (companyRegistration) {
+                    restData.companyRegistration = companyRegistration;
+                }
+            
+                if (companyOwnerId) {
+                    restData.companyOwnerId = companyOwnerId;
+                }
+            
+                if (companyManagerId) {
+                    restData.companyManagerId = companyManagerId;
+                }
+            
+                if (companyTransportLicense) {
+                    restData.companyTransportLicense = companyTransportLicense;
+                }
+            
+                return restData;
+            }
+
+            
+            function createFormDataFromLocalStorage(restData = {}) {
+                // Create a new FormData object
+                const formData = new FormData();
+            
+                // List of local storage keys to retrieve
+                const keys = [
+                    "numberRequired",
+                    "companyName",
+                    "registrationNum",
+                    "countryCity",
+                    "email",
+                    "selectedMotorcycleId",
+                    "mobile"
+                    // current page
+                    // "knowUs",
+                    // "companyRegistration",
+                    // "message",
+                    // new
+                    // "representativesCount",
+                    // "workRegions",
+                    // "deliveryAppName",
+                    // "monthlyDeposits",
+                    // "companyOwnerId",
+                    // "companyManagerId",
+                    // "companyTransportLicense",
+                ];
+            
+                // Iterate over each key and append the data to the FormData object
+                keys.forEach(key => {
+                    const value = localStorage.getItem(key);
+                    if (value !== null) {
+                        formData.append(key, value);
+                    }
+                });
+            
+                // Append key-value pairs from the restData argument
+                Object.entries(restData).forEach(([key, value]) => {
+                    if (value !== null && value !== undefined) {
+                        formData.append(key, value);
+                    }
+                });
+            
+                // Convert FormData to an object
+                // const obj = {};
+                // formData.forEach((value, key) => {
+                //     obj[key] = value;
+                // });
+            
+                return formData;
+            }
+            
+            function clearLocalStorage() {
+                const savedLanguage = localStorage.getItem("language") || "ar";
+                localStorage.clear();
+                localStorage.setItem("language", savedLanguage);
+            }
+
+            async function sendPriceRequest(restData = {}) {
+                // disable the submit btn
+                submitBtn.disabled = true;
+
+                // get the form data
+                const formData = createFormDataFromLocalStorage(restData);
+
+                const savedLanguage = localStorage.getItem("language") || "ar";
+            
+                // Define messages in both languages
+                const messages = {
+                    badRequest: {
+                        en: "Something went wrong. Please try again.",
+                        ar: "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+                    },
+                    networkError: {
+                        en: "Network error. Please try again.",
+                        ar: "خطأ في الشبكة. يرجى المحاولة مرة أخرى."
+                    }
+                };
+                
+                fetch("{% url 'pricing-request-api' %}", {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    const storedEmail = localStorage.getItem("email");
+                    clearLocalStorage();
+                    window.location.href = `{% url 'fifth-page-view' %}?sentTo=${storedEmail}`;
+                })
+                .catch(error => {
+                    clearLocalStorage();
+                    alert(messages.networkError[savedLanguage]);
+                    // window.location.href = "{% url 'second-page-view' %}";
+                });
+
+                
+            }
+        
+        });
+    </script>
+</body>
+
+</html>
+

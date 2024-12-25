@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'website/style/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/style/main.css' %}" />
+    <title>Rentty</title>
+    <meta name="description" content="استأجر دراجات نارية لشركتك">
+    <meta name="description" content="Rent motorcycles for your company">
+</head>
+
+<body class="position-relative">
+    <nav>
+        <a href="#" id="toggleLanguage">عربي</a>
+        <h1 class="logo">
+            <a href="{% url 'landing-page-view' %}" style="border: 0px;">
+                <img src="{% static 'website/rentty_logo.png' %}" alt="logo"/>
+            </a>
+        </h1>
+    </nav>
+    <section class="f-sec d-flex justify-content-center align-items-end px-2">
+        <!-- Add content if needed -->
+    </section>
+    <div class="container position-absolute translate-middle-x start-50 secPage-cards">
+        <div class="bg-white d-flex flex-column gap-5 justify-content-center align-items-center rounded-5 py-3">
+            <div><img src="{% static 'website/assets/images/done.png' %}" alt="confirm" class="img-fluid" width="200px"/></div>
+            <div class="text-center">
+                <h3 data-ar="ﺗﻢ ﺍﺭﺳﺎﻝ ﻋﺮﺽ ﺍﻟﺴﻌﺮ ﺍﻟﻰ ﺍﻟﺒﺮﻳﺪ ﺍﻻﻟﻜﺘﺮﻭﻧﻲ" data-en="The price offer has been sent to the email">ﺗﻢ ﺍﺭﺳﺎﻝ ﻋﺮﺽ ﺍﻟﺴﻌﺮ ﺍﻟﻰ ﺍﻟﺒﺮﻳﺪ ﺍﻻﻟﻜﺘﺮﻭﻧﻲ</h3>
+                <p id="emailDisplay" class="english-num">example@example.com</p>
+            </div>
+            <div class="text-center">
+                <p data-ar="ﺍﺫﺍ ﻟﻢ ﻳﺼﻠﻚ ﻋﺮﺽ ﺍﻟﺴﻌﺮ ﺗﻮﺍﺻﻞ ﻣﻌﻨﺎ ﻋﺒﺮ ﺍﻟﺒﺮﻳﺪ ﺍﻻﻟﻜﺘﺮﻭﻧﻲ" data-en="If you did not receive the price offer, contact us via email">ﺍﺫﺍ ﻟﻢ ﻳﺼﻠﻚ ﻋﺮﺽ ﺍﻟﺴﻌﺮ ﺗﻮﺍﺻﻞ ﻣﻌﻨﺎ ﻋﺒﺮ ﺍﻟﺒﺮﻳﺪ ﺍﻻﻟﻜﺘﺮﻭﻧﻲ</p>
+                <small class="english-num">info@renttyapp.com</small>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleLanguageButton = document.getElementById("toggleLanguage");
+            const elements = document.querySelectorAll("[data-ar]");
+            const body = document.body;
+            const emailDisplay = document.getElementById("emailDisplay");
+            
+            // Get the sentTo query parameter and update the email display
+            const email = getQueryParam("sentTo");
+            if (email) {
+                emailDisplay.textContent = email;
+            }
+
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            // Load the saved language from local storage or default to Arabic
+            const savedLanguage = localStorage.getItem("language") || "ar";
+            setLanguage(savedLanguage);
+
+            toggleLanguageButton.addEventListener("click", () => {
+                const currentLanguage = toggleLanguageButton.textContent === "عربي" ? "ar" : "en";
+                setLanguage(currentLanguage);
+                localStorage.setItem("language", currentLanguage);
+            });
+
+            function setLanguage(language) {
+                elements.forEach(element => {
+                    element.textContent = element.getAttribute(`data-${language}`);
+                });
+                toggleLanguageButton.textContent = language === "ar" ? "English" : "عربي";
+                body.classList.toggle("english", language === "en");
+            }
+
+        });
+    </script>
+</body>
+
+</html>

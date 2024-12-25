@@ -1,0 +1,379 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'website/style/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/style/main.css' %}" />
+    <title>Rentty</title>
+    <meta name="description" content="استأجر دراجات نارية لشركتك">
+    <meta name="description" content="Rent motorcycles for your company">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- fonts -->      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+</head>
+
+
+<body class="position-relative" id="body-id">
+    <div id="fullSection">
+        <!-- <nav>
+            <a href="#" id="toggleLanguage">عربي</a>
+            <h1 class="logo">
+                <a href="{% url 'landing-page-view' %}" style="border: 0px;">
+                    <img src="{% static 'website/rentty_logo.png' %}" alt="logo"/>
+                </a>
+            </h1>
+        </nav>-->
+        <nav> 
+            
+            <h1 class="logo">
+                <a href="{% url 'landing-page-view' %}" style="border: 0px;"></a>
+                <img src="{% static 'website/assets/images/logo.png' %}" alt="logo"/> </a>
+            </h1>
+            <a href="#" id="toggleLanguage">عربي</a>
+        </nav>
+        <section  class="d-flex justify-content-center align-items-end px-2">
+            <!-- Add content if needed -->
+        </section>
+        <div class="container secPage-cards">
+            
+            
+            <div class="bg-white justify-content-center align-items-center rounded-5 py-3 mb-5">
+                <div class="d-flex justify-content-between gap-4 flex-wrap">
+                    <div>
+                        
+                        <!-- <button type="button" class="close x-icon" data-dismiss="modal" aria-label="Close" style="order: -1; margin-right: 10px;">
+                            <span aria-hidden="true">&times;</span>
+                        </button> -->
+                        <h2 id="header-request" data-en="Request a Quote 1/2" data-ar="طلب عرض سعر جديد 1/2" style="margin-right: 40px;margin-left: 40px;">
+                            طلب عرض سعر جديد
+                            
+                            
+                        </h2>
+                    </div>
+                    
+                    
+                </div>
+                <hr style="margin-top: 20px;">
+                <div class="row row-gap-5 p-5 form-wrapper">
+                    <div class="col-12">
+                            <label for="number-required" class=" ">
+                                <h3 data-ar="العدد المطلوب" data-en="Required Quantity">العدد المطلوب</h3>
+                            </label> <br />
+                            <input name="number-required" id="number-required"
+                            data-ar="الرجاء إدخال الكمية المطلوبة" 
+                            data-en="Please enter the required quantity" 
+                            placeholder="الرجاء إدخال الكمية المطلوبة"
+                            type="number" class="english-num input-default-width  p-3" required />
+                            
+                            <span id="number-required-error" class="text-danger"></span>                    
+                    </div>
+                    <div class="col-12 col-md-6">
+                                <label for="company-name" class="">
+                                    <h3 data-ar="اسم الشركه" data-en="Company Name">اسم الشركه</h3>
+                            </label> <br /> 
+                            <input name="company-name" id="company-name" 
+                            data-ar="الرجاء إدخال اسم الشركة" 
+                            data-en="Please enter the company name" 
+                            placeholder="الرجاء إدخال اسم الشركة" type="text" class="english-num input-default-width  p-3" required />
+                            <span id="company-name-error" class="text-danger"></span>
+                    </div>
+                    <div class="col-12 col-md-6">
+                            <label for="registration-num" >
+                                <h3 data-ar="رقم السجل التجارى" data-en="Commercial Registration Number">رقم السجل التجارى</h3>
+                            </label> <br />
+                            <input name="registration-num" id="registration-num"
+                            data-ar="الرجاء إدخال رقم السجل التجاري" 
+                            data-en="Please enter the commercial registration number" 
+                            placeholder="الرجاء إدخال رقم السجل التجاري" type="number" class="english-num input-default-width   p-3" required />
+                            <span id="registration-num-error" class="text-danger"></span>
+                    </div>                  
+                    <div class="col-12">
+                        <label for="country-city" >
+                            <h3 data-ar="المنطقه/المدينه" data-en="Region/City">المنطقه/المدينه</h3>
+                        </label> <br />
+                        <input name="country-city" id="country-city" type="text"
+                        data-ar="الرجاء إدخال المنطقة/المدينة" 
+                        data-en="Please enter the region/city" 
+                        placeholder="الرجاء إدخال المنطقة/المدينة" class="english-num input-default-width  p-3" required />
+                        <span id="country-city-error" class="text-danger"></span>
+                    </div>               
+                    <div class="col-12 col-md-6">
+                            <label for="mobile" >
+                                <h3 data-ar="رقم الجوال" data-en="Mobile Number">رقم الجوال</h3>
+                            </label> <br />
+                            <div class="position-relative">
+                                <input name="mobile" id="mobile" type="mobile"    
+                                data-ar="الرجاء إدخال رقم الجوال" 
+                                data-en="Please enter a valid mobile number" 
+                                placeholder="الرجاء إدخال رقم الجوال" class="english-num input-default-width  p-3" required />
+                                <span id="mobile-error" class="text-danger"></span>
+                            </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="email" >
+                            <h3 data-ar="البريد الالكتروني" data-en="Email">البريد الالكتروني</h3>
+                        </label> <br />
+                        <input name="email" id="email" type="email"
+                        data-ar="الرجاء إدخال البريد الإلكتروني" 
+                        data-en="Please enter a valid email address" 
+                        placeholder="الرجاء إدخال البريد الإلكتروني"  class="english-num input-default-width  p-3" required />
+                        <span id="email-error" class="text-danger"></span>
+                </div>     
+            </div>
+            <div class="d-flex align-items-end justify-content-end p-4 ">
+                <a href="{% url 'landing-page-view' %}" >
+                    <button class="btn mx-1 button-home " data-ar="العودة الرئيسية" data-en="Go Home">العودة الرئيسية</button></a>
+                    <button id="submit-btn" class="btn  button-next " style="margin-left: 20px;" data-ar="التالي" data-en="Next">التالي</button>
+                </div>
+            </div>
+        </div>
+        <section class="footer p-5 mt-5 text-black text-center">
+            <hr>
+            <div id="footermaindiv" class="d-flex justify-content-around flex-wrap gap-5">
+                <div id="footerfirstdiv">
+                    <div style="margin-bottom: 35px;">
+                        
+                        <img src="{% static 'website/assets/images/logo.png' %}" alt="boxer" class=""  />
+                    </div>
+                    
+                    <p
+                    class=" m-3"
+                    data-ar="بسّط عملياتك التجارية مع حلول تأجير لا مثيل له"
+                    data-en="Simplify your business operations with unparalleled leasing solutions"
+                    >
+                    بسّط عملياتك التجارية مع حلول تأجير لا مثيل له
+                </p>
+                
+                
+            </div>
+            <div id="footerseconddiv">
+                <h6
+                data-ar="معلومات"
+                data-en="Information"
+                
+                >معلومات</h6>
+                <p
+                data-ar="سياسة الخصوصية "
+                data-en="privacy policy"
+                
+                >سياسة الخصوصية </p>
+                <p
+                data-ar=" الشروط و الأحكام"
+                data-en="terms and conditions"
+                
+                > الشروط و الأحكام</p>
+                <p
+                data-ar="الملف التعريفي"
+                data-en="Profile"
+                
+                > الملف التعريفي</p>
+                
+                
+            </div>
+            <div id="footerthirddiv">
+                <h6
+                data-ar="تواصل معنا"
+                data-en="contact us"
+                
+                >تواصل معنا</h6>
+                <a href="mailto:rent@irentty.com" style="color: black;">
+                    <i class="fa-regular fa-envelope"></i> 
+                </a>
+            </div>
+            
+            
+        </div>
+        <!-- <p data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</p>
+        <p>rent@irentty.com</p> -->
+        <hr>
+        
+        <p
+        class="mt-5"
+        data-ar="ﺟﻤﻴﻊ ﺍﻟﺤﻘﻮﻕ ﻣﺤﻔﻮﻇﺔ - ﺭﻧﺘﻲ 2024"
+        data-en="All rights reserved - Rentty 202"
+        >
+        
+        ﺟﻤﻴﻊ ﺍﻟﺤﻘﻮﻕ ﻣﺤﻔﻮﻇﺔ - ﺭﻧﺘﻲ 2024
+    </p>
+</section>
+
+    </div>
+<!-- International Telephone Input Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialize the international telephone input for the phone number field
+            const phoneInputField = document.querySelector("#mobile");
+            const phoneInput = window.intlTelInput(phoneInputField, {
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                initialCountry: "sa",  // Set Saudi Arabia as the default country
+                geoIpLookup: function(success, failure) {
+                fetch('https://ipinfo.io/json', {
+                    cache: 'reload'
+                }).then(function(resp) {
+                    return resp.json();
+                }).then(function(data) {
+                    success(data && data.country ? data.country : "sa"); // Default to Saudi Arabia if geoIpLookup fails
+                }).catch(failure);
+                },
+                nationalMode: true, // Use international mode (show country code)
+            });
+
+            const toggleLanguageButton = document.getElementById("toggleLanguage");
+            const elements = document.querySelectorAll("[data-ar]");
+            const body = document.body;
+
+            // Load the saved language from local storage or default to Arabic
+            const savedLanguage = localStorage.getItem("language") || "ar";
+            setLanguage(savedLanguage);
+
+            toggleLanguageButton.addEventListener("click", () => {
+                const currentLanguage = toggleLanguageButton.textContent === "عربي" ? "ar" : "en";
+                setLanguage(currentLanguage);
+                localStorage.setItem("language", currentLanguage);
+            });
+
+            function setLanguage(language) {
+                const header_request = document.getElementById("header-request")
+                header_request.textContent =  header_request.getAttribute(`data-${language}`)
+                elements.forEach(element => {
+                    element.textContent = element.getAttribute(`data-${language}`);
+                });
+                const inputs = document.querySelectorAll("input");
+                inputs.forEach(input => {
+                    const placeholder = input.getAttribute(`data-${language}`);
+                    if (placeholder) {
+                        input.setAttribute("placeholder", placeholder);
+                    }
+                });
+                if (language === 'en') {
+        // Get all elements with the class 'iti__flag-container'
+                    const flagContainers = document.querySelectorAll('.iti__flag-container');
+                    
+                    // Apply the style to each element
+                    flagContainers.forEach(container => {
+                        container.style.right = '0px';
+                    });
+                }else{
+                    const flagContainers = document.querySelectorAll('.iti__flag-container');
+                    
+                    // Apply the style to each element
+                    flagContainers.forEach(container => {
+                        container.style.left = '0px';
+                    });
+
+                }
+                toggleLanguageButton.textContent = language === "ar" ? "English" : "عربي";
+                body.classList.toggle("english", language === "en");
+            }
+
+            document.getElementById("submit-btn").addEventListener("click", (event) => {
+                event.preventDefault();
+                const isValid = validateForm();
+                if (isValid) {
+                    saveToLocalStorage();
+                    // Proceed to the next page
+                    window.location.href = "{% url 'fourth-page-view' %}";
+                }
+            });
+
+            function validateForm() {
+                let isValid = true;
+                const language = localStorage.getItem("language") || "ar";
+
+                // Get values
+                const numberRequired = document.getElementById("number-required").value;
+                const companyName = document.getElementById("company-name").value;
+                const registrationNum = document.getElementById("registration-num").value;
+                const countryCity = document.getElementById("country-city").value;
+                const email = document.getElementById("email").value;
+                const mobile = phoneInput.getNumber();
+
+                // Get error elements
+                const numberRequiredError = document.getElementById("number-required-error");
+                const companyNameError = document.getElementById("company-name-error");
+                const registrationNumError = document.getElementById("registration-num-error");
+                const countryCityError = document.getElementById("country-city-error");
+                const emailError = document.getElementById("email-error");
+                const mobileError = document.getElementById("mobile-error");
+
+                // Clear previous errors
+                numberRequiredError.textContent = "";
+                companyNameError.textContent = "";
+                registrationNumError.textContent = "";
+                countryCityError.textContent = "";
+                emailError.textContent = "";
+                mobileError.textContent = "";
+
+                // Validation logic
+                const minQuantity = 1; // example minimum quantity
+                const maxQuantity = 1000; // example maximum quantity
+                const regExSaudiCRN = /^[0-9]{10}$/; // example Saudi registration number format
+
+                if (numberRequired < minQuantity || numberRequired > maxQuantity) {
+                    isValid = false;
+                    numberRequiredError.textContent = language === "ar" ? "يجب أن يكون العدد بين " + minQuantity + " و " + maxQuantity : "Quantity must be between " + minQuantity + " and " + maxQuantity;
+                }
+
+                if (!companyName) {
+                    isValid = false;
+                    companyNameError.textContent = language === "ar" ? "يرجى إدخال اسم الشركة" : "Please enter the company name";
+                }
+
+                if (!regExSaudiCRN.test(registrationNum)) {
+                    isValid = false;
+                    registrationNumError.textContent = language === "ar" ? "رقم السجل التجاري غير صحيح" : "Invalid commercial registration number";
+                }
+
+                if (!countryCity) {
+                    isValid = false;
+                    countryCityError.textContent = language === "ar" ? "يرجى إدخال المنطقة/المدينة" : "Please enter the region/city";
+                }
+
+                if (!email || !/\S+@\S+\.\S+/.test(email)) {
+                    isValid = false;
+                    emailError.textContent = language === "ar" ? "يرجى إدخال بريد إلكتروني صحيح" : "Please enter a valid email address";
+                }
+
+                if (mobile.trim() === "" || !phoneInput.isValidNumber()) {
+                    isValid = false;
+                    mobileError.textContent = language === "ar" ? "يرجى إدخال رقم جوال صحيح" : "Please enter a valid mobile number";
+                }
+
+                return isValid;
+            }
+            
+            function saveToLocalStorage() {
+                // Get values
+                const numberRequired = document.getElementById("number-required").value;
+                const companyName = document.getElementById("company-name").value;
+                const registrationNum = document.getElementById("registration-num").value;
+                const countryCity = document.getElementById("country-city").value;
+                const email = document.getElementById("email").value;
+                const mobile = phoneInput.getNumber();
+    
+                // Save each value individually in local storage
+                localStorage.setItem("numberRequired", numberRequired);
+                localStorage.setItem("companyName", companyName);
+                localStorage.setItem("registrationNum", registrationNum);
+                localStorage.setItem("countryCity", countryCity);
+                localStorage.setItem("email", email);
+                localStorage.setItem("mobile", mobile);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,521 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'website/style/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'website/style/main.css' %}" />
+    <title>Rentty</title>
+    <meta name="description" content="استأجر دراجات نارية لشركتك">
+    <meta name="description" content="Rent motorcycles for your company">
+    <head>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="">
+    <div class="">
+      <div id="fullSection">
+          <nav>
+            
+            <h1 class="logo">
+              <img src="{% static 'website/assets/images/logo.png' %}" alt="logo"/>
+
+            </h1>
+            <a href="#" id="toggleLanguage">عربي</a>
+        </nav>
+
+        <section class="f-sec  ">
+          <div class="content-section">
+            <div  id="divh1">
+            <h1 data-ar="ارتقِ بأعمالك التجارية مع حلول بيع مبتكرة ومميزة" data-en="Elevate your business operations with innovative and distinctive selling solutions.">ارتقِ بأعمالك التجارية مع حلول بيع مبتكرة ومميزة</h1>
+          </div>
+          <div id="divpara">
+
+            <p data-ar="خدمات صيانة شاملة، بدائل فورية، وتأمين كامل لضمان استمرارية عملك. استأجر الآن وانطلق بثقة مع مميزاتنا:"
+            data-en="Comprehensive maintenance services, immediate replacements, and full insurance to ensure the continuity of your business. Rent now and drive confidently with our benefits:"
+            >خدمات صيانة شاملة، بدائل فورية، وتأمين كامل لضمان استمرارية عملك. استأجر الآن وانطلق بثقة مع مميزاتنا:</p>
+          </div>
+            <div id="divlist">
+              <div class="listdiv first-list-div" >
+                <ul>
+                  <li data-ar="استأجر الآن"
+                  data-en="Rent now"
+                  class="item-in-list"
+                  > استأجر الآن</li>
+                  
+                  <li data-ar="نمو سريع لأعمالك "
+                  data-en="Rapid growth of your business"
+                  >نمو سريع لأعمالك </li>
+
+
+                  <li data-ar="ركز على أعمالك"
+                  data-en="Focus on your business"
+                  
+                  >ركز على أعمالك</li>
+              </ul>
+
+              </div>
+              <div class="listdiv">
+                <ul>
+
+
+                  <li data-ar="توفير بديل عند التعطل"
+                  data-en="Providing an alternative in case of breakdown"
+                  
+                  >توفير بديل عند التعطل</li>
+
+
+                  <li data-ar=" صيانة في جميع مناطق المملكة" 
+                  data-en="Maintenance in all regions of the Kingdom">
+                   صيانة في جميع مناطق المملكة</li>
+
+
+                  <li data-ar="تأمين ضد الحوادث"
+                  data-en="Accident insurance">تأمين ضد الحوادث</li>
+              </ul>
+
+              </div>
+            </div>
+            <div id="divbutton">
+              <a style="text-decoration: none;" href="{% url 'third-page-view' %}">
+              <button data-ar=" ﺍﺳﺘﺄﺟﺮ الآن" data-en="Rent Now">
+                ﺍﺳﺘﺄﺟﺮ الآن
+              </button></a>
+
+            </div>
+
+        </div>
+          <!-- <div class="animation-container">
+            <div class="animation-section-row">
+              <h3
+                class="text-center border border-1 rounded-5 border-white moving-div-1 moving-div"
+                data-ar="استأجر الآن"
+                data-en="Rent Now"
+              >
+                استأجر الآن
+              </h3>
+            </div>
+            <div class="animation-section-row">
+              <h3
+                class="text-center border border-1 rounded-5 border-white moving-div-2 moving-div"
+                data-ar="نمو ﺳﺮﻳﻊ ﻷﻋﻤﺎﻟﻚ"
+                data-en="Rapid Growth for Your Business"
+              >
+                نمو ﺳﺮﻳﻊ ﻷﻋﻤﺎﻟﻚ
+              </h3>
+            </div>
+            <div class="animation-section-row">
+              <h3
+                class="text-center border border-1 rounded-5 border-white moving-div-3 moving-div"
+                data-ar="ركّز ﻋﻠﻰ ﺍﻋﻤﺎﻟﻚ"
+                data-en="Focus on Your Business"
+              >
+                ركّز ﻋﻠﻰ ﺍﻋﻤﺎﻟﻚ
+              </h3>
+            </div>
+
+            <div class="animation-section-row">
+              <h3
+                class="text-center border border-1 rounded-5 border-white moving-div-4 moving-div"
+                data-ar="ﺻﻴﺎﻧﺔ ﻓﻲ ﺟﻤﻴﻊ ﻣﻨﺎﻃﻖ ﺍﻟﻤﻤﻠﻜﺔ"
+                data-en="Maintenance in All Regions of the Kingdom"
+              >
+                ﺻﻴﺎﻧﺔ ﻓﻲ ﺟﻤﻴﻊ ﻣﻨﺎﻃﻖ ﺍﻟﻤﻤﻠﻜﺔ
+              </h3>
+            </div>
+            <div class="animation-section-row">
+              <h3
+                class="text-center border border-1 rounded-5 border-white moving-div-5 moving-div"
+                data-ar="ﺗﻮﻓﻴﺮ ﺑﺪﻳﻞ ﻋﻨﺪ ﺍﻟﺘﻌﻄﻞ"
+                data-en="Provide Alternative When Breakdown"
+              >
+                ﺗﻮﻓﻴﺮ ﺑﺪﻳﻞ ﻋﻨﺪ ﺍﻟﺘﻌﻄﻞ
+              </h3>
+            </div>
+            <div class="animation-section-row">
+              <h3
+                class="text-center border border-1 rounded-5 border-white moving-div-6 moving-div"
+                data-ar="ﺗﺄﻣﻴﻦ ﺿﺪ ﺍﻟﺤﻮﺍﺩﺙ"
+                data-en="Insurance Against Accidents"
+              >
+                ﺗﺄﻣﻴﻦ ﺿﺪ ﺍﻟﺤﻮﺍﺩﺙ
+              </h3>
+            </div>
+          </div> -->
+        </section>
+    </div>
+      <section class="second-sec">
+        <h2
+          class="text-center"
+          data-ar="ﺍﺳﺘﺄﺟﺮ ﺍﻓﻀﻞ ﺍﻧﻮﺍﻉ ﺍﻟﺪﺭﺍﺟﺎﺕ ﺍﻟﻨﺎﺭﻳﺔ !"
+          data-en="Rent the Best Types of Motorcycles!"
+        >
+          ﺍﺳﺘﺄﺟﺮ ﺍﻓﻀﻞ ﺍﻧﻮﺍﻉ ﺍﻟﺪﺭﺍﺟﺎﺕ ﺍﻟﻨﺎﺭﻳﺔ !
+        </h2>
+        <p id="data_id" style="display: none;">{{motorcycle_brand_list}}</p>
+       
+          <div class="justify-content-center gy-4">
+            {% for motorcycle in motorcycle_brand_list %}
+              <div class="col-md-12 card-container">
+                      <div class="bg-white  p-3 motorcycle-item" data-id="{{motorcycle.id}}">
+                          <div class="card-content-container card-motor">
+                              <div id="card-first-div">
+                                <p class="firstpara"
+                                data-ar="{{motorcycle.ar_model}}"
+                                data-en="{{motorcycle.model}}">
+                                {{motorcycle.ar_model}}
+                                </p>
+                                <ul>
+                                  <li 
+                                  data-ar="{{motorcycle.ar_country_of_origin}}"
+                                  data-en="{{motorcycle.country_of_origin}}">
+                                    {{motorcycle.ar_country_of_origin}}
+                                  </li>
+                                  <li style="color: green;"
+                                  data-ar="متوفر"
+                                  data-en="Available"
+                                  >
+                                    {{motorcycle.ar_country_of_origin}}
+                                  </li>
+                                </ul>
+                                <!-- <p 
+                                class="secondpara"
+                                data-ar="متوفر"
+                                data-en="Available"
+                              ></p> -->
+                                
+
+                              </div>
+                              <div id="card-second-div">
+                                <img src="{{motorcycle.image.url}}" alt="boxer" class="img-fluid card-motor-img"  width="200px" />
+
+                                
+                              </div>        
+                              <div  id="card-third-div">
+                                <p class="price-para" data-name="{{motorcycle.rental_price}}" data-ar-name="{{motorcycle.rental_price}} ريال شهريا" >{{motorcycle.rental_price}} </p>
+                                  <div>
+                                    <a href="{% url 'third-page-view' %}">
+                                  <button data-ar="اطلب عرض سعر"  data-en="Request a Quote" class="first-btn">اطلب عرض سعر</button></a>
+                                </div>
+                                <div>
+
+                                  <button 
+                                  data-price="{{motorcycle.rental_price}}" data-img="{{motorcycle.image.url}}"
+                                  data-country="{{motorcycle.country_of_origin}}" data-ar-country="{{motorcycle.ar_country_of_origin}}"
+                                    data-name="{{motorcycle.model}}" data-ar-name="{{motorcycle.ar_model}}"
+                                    data-ar="عرض المعلومات" data-en="Show Info"
+                                    class="second-btn motorcycle-item-button" id="motorcycle-{{motorcycle.id}}">
+                                    عرض المعلومات
+                                  </button>
+                                </div>
+                                
+                              </div>
+
+                          </div>
+                        
+                      </div>
+              </div>
+            {% endfor %}
+          </div>
+
+         <!-- end test ===================================================== -->
+      </section>
+      <p
+        class="text-center m-3 prices-tax"
+        data-ar="الاسعار تشمل الصيانة و لا تشمل ضريبة القيمة المضافة ١٥٪"
+        data-en="The prices include maintenance but do not include the 15% value-added tax (VAT)"
+      >
+      الاسعار تشمل الصيانة و لا تشمل ضريبة القيمة المضافة ١٥٪
+      </p>
+      <!-- <div class="w-100 d-flex justify-content-center">
+        <a
+          href="{% url 'second-page-view' %}"
+          class="btn bg-white text-primary p-3 rounded-4 border-0"
+        >
+          <h4 data-ar="اطلب عرض سعر" data-en="Request a Quote">اطلب عرض سعر</h4>
+        </a>
+      </div>
+    </div> -->
+    <section class="footer p-5 mt-5 text-black text-center">
+      <hr>
+      <div id="footermaindiv" class="d-flex justify-content-around flex-wrap gap-5">
+        <div id="footerfirstdiv">
+          <div style="margin-bottom: 35px;">
+
+          <img src="{% static 'website/assets/images/logo.png' %}" alt="boxer" class=""  />
+        </div>
+
+          <p
+          class=" m-3"
+          data-ar="بسّط عملياتك التجارية مع حلول تأجير لا مثيل له"
+          data-en="Simplify your business operations with unparalleled leasing solutions"
+        >
+        بسّط عملياتك التجارية مع حلول تأجير لا مثيل له
+        </p>
+                    
+
+        </div>
+        <div id="footerseconddiv">
+          <h6
+          data-ar="معلومات"
+          data-en="Information"
+
+          >معلومات</h6>
+          <p
+          data-ar="سياسة الخصوصية "
+          data-en="privacy policy"
+
+          >سياسة الخصوصية </p>
+          <p
+          data-ar=" الشروط و الأحكام"
+          data-en="terms and conditions"
+
+          > الشروط و الأحكام</p>
+          <p
+          data-ar="الملف التعريفي"
+          data-en="Profile"
+
+          > الملف التعريفي</p>
+
+          
+        </div>
+        <div id="footerthirddiv">
+          <h6
+          data-ar="تواصل معنا"
+          data-en="contact us"
+
+          >تواصل معنا</h6>
+          <a href="mailto:rent@irentty.com" style="color: black;">
+            <i class="fa-regular fa-envelope"></i> 
+          </a>
+        </div>
+
+
+      </div>
+      <!-- <p data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</p>
+      <p>rent@irentty.com</p> -->
+      <hr>
+
+      <p
+        class="mt-5"
+        data-ar="ﺟﻤﻴﻊ ﺍﻟﺤﻘﻮﻕ ﻣﺤﻔﻮﻇﺔ - ﺭﻧﺘﻲ 2024"
+        data-en="All rights reserved - Rentty 202"
+      >
+      
+        ﺟﻤﻴﻊ ﺍﻟﺤﻘﻮﻕ ﻣﺤﻔﻮﻇﺔ - ﺭﻧﺘﻲ 2024
+      </p>
+    </section>
+    <!-- pop-up modal -->
+    <div class="modal fade" id="motorcycleModal" tabindex="-1" aria-labelledby="motorcycleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div id="request-motor-modal-heaader" class="modal-header">
+            <button style="order: -1; margin-right: 10px;" type="button" class="close x-icon" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+              <h3 style="margin-left: 10px;" class="modal-title" id="motorcycleModalLabel" data-ar="معلومات الدراجة النارية" data-en="Motorcycle Details"></h3>
+
+          </div>
+          <div class="modal-body">
+            <div class="modal-img-container text-center">
+              <img src="" alt="Motorcycle Image" id="modalMotorcycleImage" class="img-fluid" />
+            </div>
+            <div class="modal-details">
+              <h4 id="modalMotorcycleName" class="english-num mb-2"></h4>
+              ● <span id="modalMotorcyclePrice" class="english-num"></span>
+              <span id="modalMotorcycleCurrency"></span>
+              <span data-ar="(شهريا)" data-en="(Monthly)"></span>
+              <p class="mt-2" id="modalMotorcycleOrigin"></p>
+              <p class="mt-2" style="color: green;font-weight: bold;font-size: 16px;" id="modalMotorcycleAvailability"></p>
+              <div class="d-flex justify-content-center mt-4"><a style="width: 100%; color: white;background-color: black;"
+                  href="{% url 'third-page-view' %}"
+                  class="btn btn-primary rounded-3">
+                  <h4 data-ar="اطلب عرض سعر" data-en="Request a Quote"></h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleLanguageButton = document.getElementById("toggleLanguage");
+        const elements = document.querySelectorAll("[data-ar]");
+        const body = document.body;
+        const storedLang = localStorage.getItem("language");
+        setLanguage(storedLang || "ar");
+        // Load the saved language from local storage or default to Arabic
+        const savedLanguage = localStorage.getItem("language") || "ar";
+        setLanguage(savedLanguage);
+
+        toggleLanguageButton.addEventListener("click", () => {
+          const currentLanguage =
+            toggleLanguageButton.textContent === "عربي" ? "ar" : "en";
+          localStorage.setItem("language", currentLanguage);
+          location.reload();
+          // setLanguage(currentLanguage);
+        });
+
+        function setLanguage(language) {
+          elements.forEach((element) => {
+            element.textContent = element.getAttribute(`data-${language}`);
+          });
+          toggleLanguageButton.textContent =
+            language === "ar" ? "English" : "عربي";
+          body.classList.toggle("english", language === "en");
+
+          const images = document.getElementsByClassName("card-motor-img");
+          for (let i = 0; i < images.length; i++) {
+            if (language === "ar") {
+              images[i].classList.add("rtl-rotate");
+            } else {
+              images[i].classList.remove("rtl-rotate");
+            }
+            
+          }
+          
+
+          const pricePara = document.querySelectorAll(".price-para");
+         
+            pricePara.forEach(para => {
+              let price = para.getAttribute('data-name');
+
+                if (language === "en"){
+                  console.log("Aaaaaaaaaaaaaaaaaaaaaaaa",price)
+
+                  para.textContent = price + " SAR Monthly"
+                }else{
+                  para.textContent = price+ " ريال شهريا"
+
+                }
+                });
+
+
+
+          if(language === "en"){
+              const showInfoButtons = document.querySelectorAll(".second-btn");
+
+
+              showInfoButtons.forEach(button => {
+              button.style.padding = "12px 55px";
+                });
+
+
+
+
+            }
+
+
+
+
+
+          // Handle motorcycle selection animation
+          const motorcycleItems = document.querySelectorAll(".motorcycle-item-button");
+
+          motorcycleItems.forEach(item => {
+              item.addEventListener("click", () => {
+
+                    let price = item.getAttribute('data-price');
+                    let ar_country= item.getAttribute('data-ar-country');
+                    let country= item.getAttribute('data-country');
+                    let name = item.getAttribute('data-name');
+                    console.log("name ===================" , name)
+                    let ar_name = item.getAttribute('data-ar-name');
+                    let data_img = item.getAttribute('data-img');
+                    let parts = item.id.split('-');  // Split by the hyphen
+                    let motorcycle_id = parts[1]
+
+
+                    // Remove 'selected' class from all items
+                    motorcycleItems.forEach(el => el.classList.remove("selected"));
+
+                    // Add 'selected' class to the clicked item
+                    // item.classList.add("selected");
+
+                    // Populate and show the modal with the clicked item's details
+                    const modalImage = document.getElementById("modalMotorcycleImage");
+                    const modalName = document.getElementById("modalMotorcycleName");
+                    const modalCurrency = document.getElementById("modalMotorcycleCurrency");
+                    const modalPrice = document.getElementById("modalMotorcyclePrice");
+                    const modalOrigin = document.getElementById("modalMotorcycleOrigin");
+                    const modalAvailability = document.getElementById("modalMotorcycleAvailability");
+
+                    const motorcycleImage = data_img;
+                    // const motorcycleName = document.getElementById("motorcycle-name").getAttribute(`data-${savedLanguage}`);
+                    let motorcycleName = ar_name
+                    let motorcycleCurrency = 'ريال'
+
+                    const motorcyclePrice = price
+                    let motorcycleOrigin = "● " + ar_country;
+                    // const motorcycleAvailability = item.querySelector("[data-en='● Available']").getAttribute(`data-${savedLanguage}`);
+                    let motorcycleAvailability = '● متوفر'
+                    if (language === "en"){
+                   motorcycleCurrency = 'SAR'
+                   motorcycleAvailability = '● Available'
+                   motorcycleOrigin = "● " + country;
+                   motorcycleName = name
+
+
+                    }
+
+                    modalImage.src = motorcycleImage;
+                    modalName.textContent = motorcycleName;
+                    modalCurrency.textContent = motorcycleCurrency;
+                    modalPrice.textContent = motorcyclePrice;
+                    modalOrigin.textContent = motorcycleOrigin;
+                    modalAvailability.textContent = motorcycleAvailability;
+
+
+                    const motorcycleModal = new bootstrap.Modal(document.getElementById("motorcycleModal"));
+                    motorcycleModal.show();
+
+                    // Get the ID of the selected motorcycle
+                    const motorcycleId = item.dataset.id;
+                    localStorage.setItem("selectedMotorcycleId", motorcycleId);
+
+
+              });
+          });
+
+        }
+        
+      });  
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const movingDivs = document.getElementsByClassName("moving-div");
+        for (let i = 0; i < movingDivs.length; i++) {
+          const divWidth = movingDivs[i].offsetWidth;
+          movingDivs[i].style.setProperty("--div-width", `${divWidth}px`);
+
+          const container = movingDivs[i].closest(".container");
+          if (getComputedStyle(container).direction === "rtl") {
+            movingDivs[i].style.animationName = "moveX-RTL";
+          } else {
+            movingDivs[i].style.animationName = "moveX-LTR";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

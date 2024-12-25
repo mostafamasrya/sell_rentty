@@ -1,0 +1,13 @@
+psycopg2==2.9.9
+asgiref==3.8.1
+dj-database-url==2.2.0
+Django==5.0.7
+django-dotenv==1.4.2
+django-jazzmin==3.0.0
+django-parler==2.3
+django-parler-rest==2.2
+djangorestframework==3.15.2
+pillow==10.3.0
+PyMySQL==1.1.1
+sqlparse==0.5.1
+typing_extensions==4.12.2

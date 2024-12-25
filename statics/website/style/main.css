@@ -1,0 +1,1085 @@
+@font-face {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  src: url("../assets/fonts/IBMPlexSansArabic-Thin.woff2") format("woff2");
+  src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+  src: url("../assets/fonts/IBMPlexSansArabic-Light.woff") format("woff") ;
+
+  src: url("../assets/fonts/IBMPlexSansArabic-Light.ttf") format("ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  src: url("../assets/fonts/IBMPlexSansArabic-Thin.woff2") format("woff2") ;
+  src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+  src: url("../assets/fonts/IBMPlexSansArabic-Light.woff") format("woff") ;
+
+
+  src: url("../assets/fonts/IBMPlexSansArabic-Light.ttf") format("ttf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+/* * {
+  outline: 1px solid red;
+} */
+* {
+  font-family: "IBM Plex Sans Arabic", Arial, sans-serif !important;
+}
+
+
+html {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6a7dae;
+  direction: rtl;
+  /* font-family: "GE_SS_Two_Light", sans-serif; */
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body.english {
+  direction: ltr;
+  font-family: "Roboto", sans-serif;
+}
+
+#card-first-div {
+  padding: 20px;
+}
+
+#card-first-div .secondpara {
+  color: #6db39c;
+
+  /* text-align: right; */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 166.667% */
+  margin-inline-start: 14px;
+}
+
+#card-first-div .firstpara {
+  color: #333;
+
+  /* text-align: right; */
+  /* Heading/h2 */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  margin-inline-start: 14px;
+}
+
+#card-first-div ul {
+  list-style-type: disc;
+  margin-top: 1rem;
+  color: #333;
+
+  /* text-align: right; */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+}
+
+#card-first-div ul li {
+  margin-bottom: 15px;
+
+  /* text-align: right; */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+}
+
+#card-third-div p {
+  color: #333;
+
+  /* text-align: right; */
+  /* Heading/h2 */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 125% */
+}
+
+#request-motor-modal-heaader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#request-motor-modal-heaader .close {
+  left: 0;
+  right: unset;
+}
+body.english #request-motor-modal-heaader .close {
+  position: absolute;
+  top: 0;
+  left: unset;
+  right: 0;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  width: fit-content;
+}
+
+#card-third-div {
+  /* width: 32%; */
+  padding: 20px;
+}
+
+.card-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 250px;
+}
+
+#card-first-div {
+  /* width: 40%; */
+}
+
+#card-second-div {
+  /* width: 28%; */
+  padding: 20px;
+  /* margin-inline-end: 147px; */
+  /* margin-right: 50px; */
+}
+
+.iti__selected-flag {
+  position: absolute !important;
+  left: 0 !important;
+  right: unset !important;
+}
+
+body.english .iti__selected-flag {
+  position: absolute !important;
+  right: 0 !important;
+  left: unset !important;
+}
+
+.iti.iti--container {
+  /* right: unset; */
+  left: 30px !important;
+  right: unset !important;
+}
+
+body.english .iti.iti--container {
+  left: unset !important;
+  right: 30px !important;
+}
+
+.iti__country-list {
+  text-align: right !important;
+}
+
+body.english .iti__country-list {
+  text-align: left !important;
+}
+
+#card-third-div .first-btn {
+  /* padding: 12px 27px; */
+  margin-top: 10px;
+  border-radius: 16px;
+  background: #333;
+  color: #fff;
+  border: 1px solid black;
+  text-align: center;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+}
+#card-third-div .second-btn {
+  /* padding: 12px 30px; */
+  margin-top: 10px;
+  border-radius: 16px;
+  background: #fff;
+  color: #333;
+  border: 1px solid black;
+
+  text-align: center;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 100% */
+}
+
+@media (max-width: 1440px) {
+  #card-third-div .second-btn {
+    padding: 12px 39px;
+  }
+
+}
+
+@media (max-width: 740px) {
+  #card-third-div .second-btn {
+    padding: 12px 40px;
+  }
+
+}
+
+@media (max-width: 1440px) {
+  #card-third-div .first-btn {
+    padding: 12px 39px;
+  }
+
+}
+
+@media (min-width: 1441px) {
+  #card-third-div .second-btn {
+    padding: 12px 38px;
+  }
+
+}
+
+
+@media (min-width: 1441px) {
+  #card-third-div .first-btn {
+    padding: 12px 38px;
+  }
+
+}
+
+
+
+.all-section-card {
+  margin-bottom: 20px;
+}
+
+.prices-tax {
+  color: #333;
+  margin-top: 20px;
+
+  text-align: center;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 166.667% */
+}
+
+.footer {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.35) -11.37%,
+      rgba(51, 51, 51, 0.35) 20.01%,
+      #6a7dae 100%
+    ),
+    #fff;
+  color: #333;
+}
+
+#footerfirstdiv {
+  /* text-align: right; */
+
+  /* width: 34%; */
+}
+#footerseconddiv {
+  /* width: 35%; */
+}
+
+#footerthirddiv {
+  /* width: 31%; */
+}
+
+#footerfirstdiv img {
+  /* width: 210.667px; */
+  /* text-align: right; */
+
+  height: 85px;
+}
+
+#footerfirstdiv p {
+  /* margin-top: 2%; */
+
+  color: #333;
+
+  /* text-align: right; */
+  /* Paragraph/Paragraph standard */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+#footerseconddiv h6 {
+  color: #333;
+  margin-bottom: 17px;
+
+  /* Heading/h5 */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+}
+#footerseconddiv p {
+  margin-bottom: 17px;
+}
+#footerthirddiv p {
+  margin-bottom: 17px;
+}
+#footerthirddiv h6 {
+  color: #333;
+  margin-bottom: 17px;
+
+  /* Heading/h5 */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+}
+
+nav {
+  display: flex; /* Apply Flexbox to the nav container */
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center; /* Vertically center items */
+  padding: 20px; /* Optional: Add padding for spacing */
+}
+
+#toggleLanguage {
+  width: fit-content;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  text-decoration: none;
+  /* height: 30px; */
+  text-align: center;
+  margin-inline-end: 4rem;
+  padding: 5px 12px;
+}
+
+.logo img {
+  max-width: 100%; /* Ensure the logo scales correctly */
+  height: auto;
+  margin-inline-start: 4rem; /* Maintain the aspect ratio */
+}
+
+.f-sec {
+  position: relative;
+  min-height: 911px;
+  /* max-width: 2000px; */
+  /* margin: auto auto 100px auto; */
+}
+
+#fullSection {
+  background-image: url(../assets/images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  width: 100%;
+  height: 100%;
+  margin-bottom: 6rem;
+}
+
+body.english #fullSection {
+  background-image: url(../assets/images/miror-hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 6rem;
+}
+
+/* Apply transformation only in RTL direction */
+body.english .f-sec::before {
+  transform: scaleX(1);
+}
+
+.f-sec h3 {
+  width: fit-content;
+  padding: 5px 20px;
+  white-space: nowrap;
+  color: white;
+}
+
+.card-container {
+  margin: auto;
+  margin-bottom: 30px;
+  /* max-width: 1200px; */
+}
+
+.rtl-rotate {
+  transform: rotateY(180deg);
+}
+
+.second-sec {
+  margin-bottom: 3rem;
+}
+
+.second-sec h2 {
+  margin: 6.5rem;
+  color: #333;
+  text-align: center;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.motorcycle-item {
+  margin: auto;
+  border-radius: 16px;
+  border: 1px solid #333;
+  /* height: 250px; */
+  width: 80%;
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .motorcycle-item {
+    width: 90%; /* Adjust the width as per your requirement */
+    margin: 0 auto; /* Center the item horizontally */
+  }
+}
+
+
+@media (min-width: 1200px) {
+  body.english .iti.iti--container {
+    /* width: unset; */
+  }
+}
+
+@media (max-width: 1440px) {
+  /* #fullSection {
+    background-size: auto;
+  } */
+
+  .content-section {
+    padding: 60px !important;
+  }
+
+  .f-sec {
+    min-height: 500px;
+  }
+
+  .card-content-container {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* #fullSection {
+    background-image: none !important;
+    background-size: auto;
+  }
+
+  body.english #fullSection {
+    #fullSection {
+      background-image: none !important;
+      background-size: auto;
+    }
+  } */
+
+  #divh1 h1 {
+    font-size: 60px;
+
+    line-height: normal;
+  }
+
+  .content-section {
+    padding: 40px !important;
+  }
+
+  #divh1 {
+    width: fit-content !important;
+    /* width: 40% !important; */
+  }
+
+  #divpara {
+    width: fit-content !important;
+  }
+
+  .f-sec {
+    position: relative;
+    min-height: unset;
+  }
+
+  .form-wrapper h3 {
+    font-size: 22px !important;
+  }
+
+  .form-wrapper input {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #divh1 h1 {
+    font-size: 60px;
+    line-height: normal;
+  }
+
+  #fullSection {
+    background-image: none !important;
+    background-size: auto;
+  }
+
+  body.english #fullSection {
+    background-image: none !important;
+    background-size: auto;
+  }
+
+  .content-section {
+    width: 100% !important;
+  }
+
+  .card-content-container {
+    gap: 40px;
+  }
+
+  .form-wrapper h3 {
+    font-size: 18px !important;
+  }
+
+  .form-wrapper input {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-content-container {
+    gap: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .f-sec h3 {
+    font-size: 18px;
+  }
+
+  #divh1 h1 {
+    font-size: 50px;
+    line-height: normal;
+  }
+
+  .card-content-container {
+    flex-direction: column;
+  }
+
+  #toggleLanguage {
+    margin-inline-end: 1rem;
+  }
+
+  .logo img {
+    margin-inline-start: 1rem;
+  }
+
+  .content-section {
+    padding: 20px !important;
+  }
+
+  .secPage-cards {
+    margin-top: 20%;
+    width: 100% !important;
+  }
+
+  .form-wrapper input {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .f-sec h3 {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .card-motor {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .card-motor-specs {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .second-sec h2 {
+    margin: 0 1.5rem 3.5rem 1.5rem;
+  }
+  .f-sec {
+    margin-bottom: 0;
+  }
+
+  nav {
+    padding: 15px 5px 0 5px;
+  }
+
+  .form-wrapper input {
+    font-size: 12px !important;
+  }
+}
+
+.num {
+  font-weight: bold;
+}
+
+.content {
+  /* width: 200px; */
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.form-wrapper h3 {
+  font-size: 26px;
+  white-space: nowrap;
+}
+
+.form-wrapper input {
+  font-size: 16px;
+}
+
+.secPage-cards {
+  margin-top: 5%;
+  width: 80%;
+}
+
+input,
+input:focus {
+  border-color: #2e4e8c !important;
+}
+
+.moto {
+  transform: rotateY(180deg);
+}
+
+.arabic-numbers {
+  font-variant-numeric: normal;
+}
+
+.selected {
+  animation: selectAnimation 0.5s ease-in-out;
+  border-color: #00ff08df !important; /* Change border color to highlight */
+}
+
+@keyframes selectAnimation {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Hide the default file input */
+input[type="file"].d-none {
+  display: none;
+}
+
+.form-input-box {
+  max-width: 600px;
+}
+.file-btn {
+  border: 1px solid black;
+  border-radius: 0%;
+  background-color: rgb(229, 223, 223);
+  white-space: nowrap;
+  width: fit-content;
+  margin: auto;
+}
+/* Style the custom file input label */
+.custom-file-label {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #2e4e8c;
+}
+
+/* Change the text color when a file is selected */
+.custom-file-label span {
+  color: #2e4e8c;
+}
+
+.custom-file-label:hover {
+  background-color: #f8f9fa;
+}
+
+/* Adjust the appearance to match other inputs */
+.input-default-width {
+  width: 100%;
+  max-width: 100%;
+  min-height: 2.5rem;
+  border: none; /* Removes all borders */
+  outline: none; /* Removes focus outline */
+  border-bottom: 1px solid black; /* Add a bottom border */
+}
+
+.button-home {
+  border-radius: 12px;
+  border: 1px solid black;
+  height: 50px;
+}
+.back-button {
+  border-radius: 12px;
+  border: 1px solid black;
+  width: 90px;
+  height: 50px;
+}
+
+.button-next {
+  background-color: black;
+  color: white;
+  width: 90px;
+  height: 50px;
+
+  margin-inline-start: 30px;
+}
+
+@media (max-width: 768px) {
+  .input-default-width {
+    max-width: 100%; /* Optional: Set a max width if needed */
+  }
+}
+
+.container {
+  max-width: 100%;
+}
+
+.animation-container {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.animation-section-row {
+  position: relative;
+  min-height: 60px;
+}
+
+.moving-div {
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: moveX 10s infinite linear;
+  box-sizing: border-box;
+}
+
+.moving-div-1 {
+  font-size: 28px;
+  font-weight: 600;
+  animation: moveX 8s infinite linear;
+}
+
+.moving-div-2 {
+  animation: moveX 11s infinite linear;
+}
+
+.moving-div-3 {
+  animation: moveX 16s infinite linear;
+}
+
+.moving-div-4 {
+  animation: moveX 8s infinite linear;
+}
+
+.moving-div-5 {
+  animation: moveX 18s infinite linear;
+}
+
+.moving-div-6 {
+  animation: moveX 10s infinite linear;
+}
+
+@keyframes moveX-LTR {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - var(--div-width));
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes moveX-RTL {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: calc(100% - var(--div-width));
+  }
+  100% {
+    right: 0;
+  }
+}
+
+/* @keyframes moveX {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 200px;
+  }
+  100% {
+    left: 0;
+  }
+} */
+
+.english-num {
+  font-family: "Roboto", sans-serif;
+}
+
+/* phone number div  */
+.iti {
+  width: 100% !important;
+}
+.iti--container {
+  width: 50% !important;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  font-family: "IBM Plex Sans Arabic";
+  gap: 20px;
+  padding: 120px;
+  border-radius: 8px;
+  margin: 20px 0;
+  width: 70%;
+}
+
+#divh1 {
+  width: 99%;
+  text-wrap: wrap;
+}
+
+#divlist {
+  color: #fff;
+  display: flex;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  padding: 20px;
+}
+
+
+@media (max-width: 464) {
+  .first-list-div li{
+    margin-bottom: 26px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .listdiv {
+
+    margin-inline-end: -1% !important;
+
+  }
+
+  #divlist{
+    justify-content: space-between;
+  }
+  #divlist ul li{
+    font-size: 14px;
+    padding-inline-start: -2px;
+  }
+}
+
+
+#divbutton {
+  /* margin-inline-end: 8%; */
+  color: #333;
+
+  text-align: center;
+  /* Heading/h4 */
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+#divbutton button {
+  display: flex;
+  padding: 16px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  border: 2px solid black;
+  color: black;
+  background: #fff;
+
+  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.2);
+}
+
+@media (max-width: 768px) {
+  #divbutton button {
+    padding: 16px 20px;
+    margin-inline-start: 22px;
+
+  }
+
+}
+@media (max-width: 768px) {
+  #card-first-div ul {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  #card-first-div {
+    padding: 0px;
+
+  }
+  #card-second-div {
+    /* width: 28%; */
+    padding: 0px;
+    /* margin-inline-end: 147px; */
+    /* margin-right: 50px; */
+  }
+
+}
+
+
+.listdiv {
+  margin-inline-end: 8%;
+}
+
+#divlist ul{
+  list-style-type: disc;
+  padding-inline-end: 20px;
+
+}
+
+.item-in-list{
+  font-size: 24px;
+}
+
+
+#divpara {
+  color: #fff;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  text-wrap: wrap;
+  width: 86%; 
+}
+.content-section h1 {
+  color: #fff;
+  font-family: "IBM Plex Sans Arabic";
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120px;
+  margin-bottom: 10px;
+}
+
+.content-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-section ul li {
+  font-size: 20px;
+  line-height: 1.8;
+  padding-inline-start: 10px;
+}
+
+#body-id {
+  background-image: url(../assets/images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#body-id2 {
+  background-image: url(../assets/images/hero-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.input-default-width-file {
+  width: 100%;
+  max-width: 100%;
+  /* height: 4rem; */
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.input-file-placeholder {
+  padding: 0.5rem;
+  color: rgb(183, 182, 182);
+  white-space: wrap;
+  overflow: hidden;
+  text-align: start;
+}
+
+.form-input-box input::placeholder {
+  white-space: wrap;
+}
+
+input::placeholder {
+  color: rgb(183, 182, 182);
+  opacity: 1;
+}
