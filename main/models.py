@@ -3,7 +3,7 @@ from parler.models import TranslatableModel, TranslatedFields, TranslationDoesNo
 from django.core.validators import RegexValidator
 
 class MotorcycleModel(TranslatableModel):
-    rental_price = models.DecimalField('سعر الإيجار', max_digits=10, decimal_places=2)
+    rental_price = models.DecimalField('سعر البيع', max_digits=10, decimal_places=2)
     translations = TranslatedFields(
         model = models.CharField('موديل', max_length=255),
         country_of_origin = models.CharField('بلد المنشأ', max_length=128),
@@ -43,7 +43,7 @@ class MotorcycleModel(TranslatableModel):
 class Motorcycle(models.Model):
     motorcycle_model = models.ForeignKey(MotorcycleModel, on_delete=models.CASCADE, related_name="Motorcycles", verbose_name='موديل الدراجة النارية')
     chassis_number = models.CharField('رقم الهيكل', max_length=255, unique=True)
-    rented = models.BooleanField('تم التأجير', default=False)
+    rented = models.BooleanField('تم البيع', default=False)
     
     def __str__(self):
         return f'{self.motorcycle_model.model} - {self.chassis_number}'

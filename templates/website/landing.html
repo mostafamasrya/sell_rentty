@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{% static 'website/style/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'website/style/main.css' %}" />
     <title>Rentty</title>
-    <meta name="description" content="استأجر دراجات نارية لشركتك">
-    <meta name="description" content="Rent motorcycles for your company">
+    <meta name="description" content="اشترِ دراجات نارية لشركتك">
+    <meta name="description" content="Buy motorcycles for your company">
     <head>
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -43,126 +43,70 @@
           </div>
           <div id="divpara">
 
-            <p data-ar="خدمات صيانة شاملة، بدائل فورية، وتأمين كامل لضمان استمرارية عملك. استأجر الآن وانطلق بثقة مع مميزاتنا:"
-            data-en="Comprehensive maintenance services, immediate replacements, and full insurance to ensure the continuity of your business. Rent now and drive confidently with our benefits:"
-            >خدمات صيانة شاملة، بدائل فورية، وتأمين كامل لضمان استمرارية عملك. استأجر الآن وانطلق بثقة مع مميزاتنا:</p>
+            <p data-ar="استمتع بخدمات صيانة متكاملة، خيارات بيع مرنة، وتأمين شامل يضمن راحة بالك. اشترِ الآن واستفد من مميزاتنا الفريدة بكل ثقة:"
+            data-en="Enjoy comprehensive maintenance services, flexible selling options, and full insurance to ensure your peace of mind. Buy now and take advantage of our unique features with confidence.:"
+            >استمتع بخدمات صيانة متكاملة، خيارات بيع مرنة، وتأمين شامل يضمن راحة بالك. اشترِ الآن واستفد من مميزاتنا الفريدة بكل ثقة.:</p>
           </div>
-            <div id="divlist">
-              <div class="listdiv first-list-div" >
-                <ul>
-                  <li data-ar="استأجر الآن"
-                  data-en="Rent now"
-                  class="item-in-list"
-                  > استأجر الآن</li>
-                  
-                  <li data-ar="نمو سريع لأعمالك "
-                  data-en="Rapid growth of your business"
-                  >نمو سريع لأعمالك </li>
+          <div id="divlist">
+            <div class="listdiv first-list-div">
+              <ul>
+                <li data-ar="نمو أرباحك بسهولة" 
+                data-en="Easily grow your profits">
+              نمو أرباحك بسهولة
+            </li>
+            <li data-ar="حقق أهدافك التجارية" 
+            data-en="Achieve your business goals">
+          حقق أهدافك التجارية
+        </li>
+                <li data-ar="اشترِ الآن" 
+                    data-en="Buy now" 
+                    class="item-in-list">
+                  اشترِ الآن
+                </li>
+                
 
+          
 
-                  <li data-ar="ركز على أعمالك"
-                  data-en="Focus on your business"
-                  
-                  >ركز على أعمالك</li>
               </ul>
-
-              </div>
-              <div class="listdiv">
-                <ul>
-
-
-                  <li data-ar="توفير بديل عند التعطل"
-                  data-en="Providing an alternative in case of breakdown"
-                  
-                  >توفير بديل عند التعطل</li>
-
-
-                  <li data-ar=" صيانة في جميع مناطق المملكة" 
-                  data-en="Maintenance in all regions of the Kingdom">
-                   صيانة في جميع مناطق المملكة</li>
-
-
-                  <li data-ar="تأمين ضد الحوادث"
-                  data-en="Accident insurance">تأمين ضد الحوادث</li>
-              </ul>
-
-              </div>
             </div>
+            <div class="listdiv">
+              <ul>
+                <li data-ar="ضمان شامل للمنتج" 
+                    data-en="Comprehensive product warranty">
+                  ضمان شامل للمنتج
+                </li>
+          
+                <li data-ar="خدمة صيانة بعد البيع في جميع المناطق" 
+                    data-en="After-sales maintenance service in all regions">
+                  خدمة صيانة بعد البيع في جميع المناطق
+                </li>
+          
+                <li data-ar="تأمين على المنتجات أثناء الشحن" 
+                    data-en="Product insurance during shipping">
+                  تأمين على المنتجات أثناء الشحن
+                </li>
+              </ul>
+            </div>
+          </div>
+          
             <div id="divbutton">
               <a style="text-decoration: none;" href="{% url 'third-page-view' %}">
-              <button data-ar=" ﺍﺳﺘﺄﺟﺮ الآن" data-en="Rent Now">
-                ﺍﺳﺘﺄﺟﺮ الآن
+              <button data-ar=" اشترِ الآن" data-en="Buy Now">
+                اشترِ الآن
               </button></a>
 
             </div>
 
         </div>
-          <!-- <div class="animation-container">
-            <div class="animation-section-row">
-              <h3
-                class="text-center border border-1 rounded-5 border-white moving-div-1 moving-div"
-                data-ar="استأجر الآن"
-                data-en="Rent Now"
-              >
-                استأجر الآن
-              </h3>
-            </div>
-            <div class="animation-section-row">
-              <h3
-                class="text-center border border-1 rounded-5 border-white moving-div-2 moving-div"
-                data-ar="نمو ﺳﺮﻳﻊ ﻷﻋﻤﺎﻟﻚ"
-                data-en="Rapid Growth for Your Business"
-              >
-                نمو ﺳﺮﻳﻊ ﻷﻋﻤﺎﻟﻚ
-              </h3>
-            </div>
-            <div class="animation-section-row">
-              <h3
-                class="text-center border border-1 rounded-5 border-white moving-div-3 moving-div"
-                data-ar="ركّز ﻋﻠﻰ ﺍﻋﻤﺎﻟﻚ"
-                data-en="Focus on Your Business"
-              >
-                ركّز ﻋﻠﻰ ﺍﻋﻤﺎﻟﻚ
-              </h3>
-            </div>
-
-            <div class="animation-section-row">
-              <h3
-                class="text-center border border-1 rounded-5 border-white moving-div-4 moving-div"
-                data-ar="ﺻﻴﺎﻧﺔ ﻓﻲ ﺟﻤﻴﻊ ﻣﻨﺎﻃﻖ ﺍﻟﻤﻤﻠﻜﺔ"
-                data-en="Maintenance in All Regions of the Kingdom"
-              >
-                ﺻﻴﺎﻧﺔ ﻓﻲ ﺟﻤﻴﻊ ﻣﻨﺎﻃﻖ ﺍﻟﻤﻤﻠﻜﺔ
-              </h3>
-            </div>
-            <div class="animation-section-row">
-              <h3
-                class="text-center border border-1 rounded-5 border-white moving-div-5 moving-div"
-                data-ar="ﺗﻮﻓﻴﺮ ﺑﺪﻳﻞ ﻋﻨﺪ ﺍﻟﺘﻌﻄﻞ"
-                data-en="Provide Alternative When Breakdown"
-              >
-                ﺗﻮﻓﻴﺮ ﺑﺪﻳﻞ ﻋﻨﺪ ﺍﻟﺘﻌﻄﻞ
-              </h3>
-            </div>
-            <div class="animation-section-row">
-              <h3
-                class="text-center border border-1 rounded-5 border-white moving-div-6 moving-div"
-                data-ar="ﺗﺄﻣﻴﻦ ﺿﺪ ﺍﻟﺤﻮﺍﺩﺙ"
-                data-en="Insurance Against Accidents"
-              >
-                ﺗﺄﻣﻴﻦ ﺿﺪ ﺍﻟﺤﻮﺍﺩﺙ
-              </h3>
-            </div>
-          </div> -->
         </section>
     </div>
       <section class="second-sec">
         <h2
           class="text-center"
-          data-ar="ﺍﺳﺘﺄﺟﺮ ﺍﻓﻀﻞ ﺍﻧﻮﺍﻉ ﺍﻟﺪﺭﺍﺟﺎﺕ ﺍﻟﻨﺎﺭﻳﺔ !"
-          data-en="Rent the Best Types of Motorcycles!"
+          data-ar="اشترِ ﺍﻓﻀﻞ ﺍﻧﻮﺍﻉ ﺍﻟﺪﺭﺍﺟﺎﺕ ﺍﻟﻨﺎﺭﻳﺔ !"
+          data-en="Buy the Best Types of Motorcycles!"
         >
-          ﺍﺳﺘﺄﺟﺮ ﺍﻓﻀﻞ ﺍﻧﻮﺍﻉ ﺍﻟﺪﺭﺍﺟﺎﺕ ﺍﻟﻨﺎﺭﻳﺔ !
+        اشترِ ﺍﻓﻀﻞ ﺍﻧﻮﺍﻉ ﺍﻟﺪﺭﺍﺟﺎﺕ ﺍﻟﻨﺎﺭﻳﺔ !
         </h2>
         <p id="data_id" style="display: none;">{{motorcycle_brand_list}}</p>
        
@@ -204,10 +148,10 @@
                                 
                               </div>        
                               <div  id="card-third-div">
-                                <p class="price-para" data-name="{{motorcycle.rental_price}}" data-ar-name="{{motorcycle.rental_price}} ريال شهريا" >{{motorcycle.rental_price}} </p>
+                                <p class="price-para" data-name="{{motorcycle.rental_price}}" data-ar-name="{{motorcycle.rental_price}} ريال " >{{motorcycle.rental_price}} </p>
                                   <div>
                                     <a href="{% url 'third-page-view' %}">
-                                  <button data-ar="اطلب عرض سعر"  data-en="Request a Quote" class="first-btn">اطلب عرض سعر</button></a>
+                                  <button data-ar="اطلب عرض سعر"  data-en="Get a Quote" class="first-btn">اطلب عرض سعر</button></a>
                                 </div>
                                 <div>
 
@@ -234,11 +178,12 @@
       </section>
       <p
         class="text-center m-3 prices-tax"
-        data-ar="الاسعار تشمل الصيانة و لا تشمل ضريبة القيمة المضافة ١٥٪"
-        data-en="The prices include maintenance but do not include the 15% value-added tax (VAT)"
+        data-ar="الاسعار لا تشمل ضريبة القيمة المضافة ١٥٪"
+        data-en="The prices do not include the 15% value-added tax (VAT)"
       >
-      الاسعار تشمل الصيانة و لا تشمل ضريبة القيمة المضافة ١٥٪
+      الاسعار لا تشمل ضريبة القيمة المضافة ١٥٪
       </p>
+    </div>
       <!-- <div class="w-100 d-flex justify-content-center">
         <a
           href="{% url 'second-page-view' %}"
@@ -259,10 +204,10 @@
 
           <p
           class=" m-3"
-          data-ar="بسّط عملياتك التجارية مع حلول تأجير لا مثيل له"
-          data-en="Simplify your business operations with unparalleled leasing solutions"
+          data-ar="ارتقِ بأعمالك التجارية مع حلول بيع مبتكرة ومميزة"
+          data-en="Elevate your business operations with innovative and distinctive selling solutions"
         >
-        بسّط عملياتك التجارية مع حلول تأجير لا مثيل له
+       ارتقِ بأعمالك التجارية مع حلول بيع مبتكرة ومميزة
         </p>
                     
 
@@ -336,7 +281,7 @@
               <h4 id="modalMotorcycleName" class="english-num mb-2"></h4>
               ● <span id="modalMotorcyclePrice" class="english-num"></span>
               <span id="modalMotorcycleCurrency"></span>
-              <span data-ar="(شهريا)" data-en="(Monthly)"></span>
+              <!-- <span data-ar="(شهريا)" data-en="(Monthly)"></span> -->
               <p class="mt-2" id="modalMotorcycleOrigin"></p>
               <p class="mt-2" style="color: green;font-weight: bold;font-size: 16px;" id="modalMotorcycleAvailability"></p>
               <div class="d-flex justify-content-center mt-4"><a style="width: 100%; color: white;background-color: black;"
@@ -403,9 +348,9 @@
                 if (language === "en"){
                   console.log("Aaaaaaaaaaaaaaaaaaaaaaaa",price)
 
-                  para.textContent = price + " SAR Monthly"
+                  para.textContent = price + " SAR "
                 }else{
-                  para.textContent = price+ " ريال شهريا"
+                  para.textContent = price+ " ريال "
 
                 }
                 });

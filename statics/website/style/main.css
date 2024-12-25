@@ -134,6 +134,7 @@ body.english {
   font-style: normal;
   font-weight: 500;
   line-height: 40px; /* 125% */
+  text-align: center;
 }
 
 #request-motor-modal-heaader {
@@ -276,6 +277,10 @@ body.english .iti__country-list {
 @media (min-width: 1441px) {
   #card-third-div .first-btn {
     padding: 12px 38px;
+  }
+  body.english #card-third-div .first-btn {
+
+    padding: 12px 45px;
   }
 
 }
@@ -474,6 +479,12 @@ body.english .f-sec::before {
     width: 90%; /* Adjust the width as per your requirement */
     margin: 0 auto; /* Center the item horizontally */
   }
+  #fullSection{
+    margin-bottom: 2rem;
+  }
+  body.englsih .second-sec {
+    margin-top: -4rem;
+  }
 }
 
 
@@ -592,7 +603,7 @@ body.english .f-sec::before {
   }
 
   #divh1 h1 {
-    font-size: 50px;
+    font-size: 32px;
     line-height: normal;
   }
 
@@ -996,6 +1007,11 @@ input[type="file"].d-none {
     padding: 0px;
     /* margin-inline-end: 147px; */
     /* margin-right: 50px; */
+  }
+  body.english #card-third-div .first-btn{
+    padding: 12px 45px;
+
+
   }
 
 }
