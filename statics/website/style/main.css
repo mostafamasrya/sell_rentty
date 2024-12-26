@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  background-color: #6a7dae;
+  background-color: #72828C;
   direction: rtl;
   /* font-family: "GE_SS_Two_Light", sans-serif; */
   font-family: "IBM Plex Sans Arabic", sans-serif;
@@ -304,13 +304,9 @@ body.english .iti__country-list {
 }
 
 .footer {
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.35) -11.37%,
-      rgba(51, 51, 51, 0.35) 20.01%,
-      #6a7dae 100%
-    ),
-    #fff;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.35) -11.37%, rgba(51, 51, 51, 0.35) 20.01%, #72828C 100%), #FFF;
+
+
   color: #333;
 }
 
@@ -411,7 +407,7 @@ nav {
 }
 
 #fullSection {
-  background-image: url(../assets/images/hero-image.png);
+  background-image: url(../assets/images/sell_hero_image.png);
   background-size: cover;
   background-repeat: no-repeat;
   /* background-position: center; */
@@ -421,7 +417,7 @@ nav {
 }
 
 body.english #fullSection {
-  background-image: url(../assets/images/miror-hero-image.png);
+  background-image: url(../assets/images/mirror_sell_hero_image.png);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -1052,6 +1048,14 @@ input[type="file"].d-none {
   margin-bottom: 10px;
 }
 
+body.english .content-section h1 {
+    font-size: 44px;
+  font-weight: 600;
+  line-height: 80px;
+  margin-bottom: 10px;
+
+}
+
 .content-section ul {
   list-style: none;
   padding: 0;
@@ -1064,13 +1068,13 @@ input[type="file"].d-none {
 }
 
 #body-id {
-  background-image: url(../assets/images/hero-image.png);
+  background-image: url(../assets/images/sell_hero_image.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 #body-id2 {
-  background-image: url(../assets/images/hero-image.png);
+  background-image: url(../assets/images/sell_hero_image.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
